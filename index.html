@@ -1,0 +1,46 @@
+<!--
+  File: index.html
+HTML form that takes min and max of both row and column and calls javascript to print out a table
+also added jquery for verification
+Michael Batbouta, UMass Lowell Computer Science, Michael_batbouta@student.uml.edu
+Copyright (c) 2021 by Wenjin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Michael Batbouta on august 8, 2021 at 9:30 pm
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="js/tablecreate.js"></script>
+  </head>
+  <body>
+    <!-- page content
+     max and min of type num step = 1 for whole number-->
+    <h1>Multiplication Table Generator</h1>
+    <p>Please enter numbers between -50 and 50 for a multiplication table to be made</p>
+    <div id="wrapper">
+      <form id="dynamicCheck">
+        <label for="minCol">Minimium Column Value:</label>
+        <input id="minCol" name="minCol" type="number" min="-50" max="50" step="1" value="0" ><br><br>
+        <p id="minColRes"></p>
+        <label for="maxCol">Maximum Column Value:</label>
+        <input id="maxCol" name="maxCol" type="number" min="-50" max="50" step="1" value="0"><br><br>
+        <p id="maxColRes"></p>
+        <label for="minRow">Minimium Row Value:</label>
+        <input id="minRow" name="minRow" type="number" min="-50" max="50" step="1" value="0"><br><br>
+        <p id="minRowRes"></p>
+        <label for="maxRow">Maximum Column Value:</label>
+        <input id="maxRow" name="maxRow" type="number" min="-50" max="50" step="1" value="0"><br><br>
+        <p id="maxRowRes"></p>
+      </form>
+  
+     <div id="myDynamicTable"></div>
+    </div>
+
+  </body>
+</html>
