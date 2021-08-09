@@ -12,6 +12,7 @@ https://stackoverflow.com/questions/17548520/dynamically-adding-a-tab-on-button-
 https://www.lidorsystems.com/support/articles/jquery/tabstrip/tab-strip-add-remove.aspx
 
 */
+
 $(document).ready(function() {
 //min and max functions for verification
 $.validator.addMethod('lessThan', function (value, element, param) {
@@ -65,11 +66,11 @@ $.validator.addMethod("noDecimal", function(value, element) {
 
   });
 
+  //how the page auto updates and checks validation each time around
   $('#minCol').change(function(e) {
     if($('#minCol').valid() && $('#maxCol').valid() && $('#minRow').valid() && $('#maxRow').valid()){
       addTable()
     }
-
   })
   $('#maxCol').change(function(e) {
     if($('#minCol').valid() && $('#maxCol').valid() && $('#minRow').valid() && $('#maxRow').valid()){
@@ -90,6 +91,7 @@ $.validator.addMethod("noDecimal", function(value, element) {
 
 });
 
+//same function used in homework 3 to add the table
 function addTable() {
   var myTableDiv = document.getElementById("myDynamicTable");
   var table = document.createElement('TABLE');
